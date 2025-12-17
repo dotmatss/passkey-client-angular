@@ -1,1 +1,10 @@
-<p>register works!</p>
+<div class="max-w-md mx-auto mt-20 p-6 bg-white rounded shadow">
+  <form [formGroup]="registerForm" (ngSubmit)="register()">
+    <h2 class="text-xl font-bold mb-4">Register</h2>
+    <label class="block mb-2">Email</label>
+    <input formControlName="email" type="email" class="w-full p-2 border rounded mb-4"/>
+    <label class="block mb-2">Password</label>
+    <input formControlName="password" type="password" class="w-full p-2 border rounded mb-4"/>
+    <button type="submit" class="w-full bg-green-500 text-white p-2 rounded">Register</button>
+  </form>
+</div>

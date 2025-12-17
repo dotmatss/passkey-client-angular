@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="max-w-md mx-auto mt-20 p-6 bg-white rounded shadow">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <h2 class="text-xl font-bold mb-4">Login</h2>
+
+    <label class="block mb-2">Email</label>
+    <input formControlName="email" type="email" class="w-full p-2 border rounded mb-4"/>
+
+    <label class="block mb-2">Password</label>
+    <input formControlName="password" type="password" class="w-full p-2 border rounded mb-4"/>
+
+    <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded mb-2">Login</button>
+    <button type="button" (click)="loginWithPasskey()" class="w-full bg-green-500 text-white p-2 rounded">
+      Login with Passkey
+    </button>
+  </form>
+</div>
